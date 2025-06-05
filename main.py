@@ -1,6 +1,6 @@
 from horner import metodo_horner
 from muller import muller_con_procedimiento
-
+from interpolacionlineal import interpolacion_lineal
 
 def opcion_horner():
     entrada = input("Ingresa los coeficientes del polinomio separados por espacios (orden descendente): ")
@@ -10,7 +10,6 @@ def opcion_horner():
     resultado = metodo_horner(coef, x_valor, verbose=True)
     print(f"\nResultado: {resultado}")
 
-
 def opcion_muller():
     print("\n--- Método de Muller ---")
     fx_expr_str = input("Ingrese el polinomio (por ejemplo: x**3 - 2*x + 1): ")
@@ -19,8 +18,11 @@ def opcion_muller():
     x2 = float(input("Ingrese x2: "))
     tol = float(input("Ingrese la tolerancia (por defecto 1e-6): ") or 1e-6)
     max_iter = int(input("Ingrese número máximo de iteraciones (por defecto 10): ") or 10)
-    
     muller_con_procedimiento(fx_expr_str, x0, x1, x2, tol, max_iter)
+
+def opcion_interpolacion_lineal():
+    print("\n--- Método de Interpolación Lineal ---")
+    interpolacion_lineal()
 
 
 def mostrar_menu():
@@ -42,7 +44,7 @@ def main():
         elif opcion == "2":
             opcion_muller()
         elif opcion == "3":
-            print(">> Aquí irá la interpolación lineal")
+            opcion_interpolacion_lineal()
         elif opcion == "4":
             print(">> Aquí irá la evaluación por LaGrange")
         elif opcion == "5":
