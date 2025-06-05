@@ -1,6 +1,13 @@
 from horner import metodo_horner
 from muller import muller_con_procedimiento
 from interpolacionlineal import interpolacion_lineal
+from lagrange import evaluacion_por_lagrange
+from polinomio_lagrange import polinomio_de_lagrange
+from regresion_lineal import regresion_lineal
+
+
+
+
 
 def opcion_horner():
     entrada = input("Ingresa los coeficientes del polinomio separados por espacios (orden descendente): ")
@@ -24,14 +31,26 @@ def opcion_interpolacion_lineal():
     print("\n--- Método de Interpolación Lineal ---")
     interpolacion_lineal()
 
+def opcion_lagrange():
+    resultado = evaluacion_por_lagrange()
+    print(f"\nResultado: {resultado}")
+
+def opcion_polinomio_lagrange():
+    polinomio_de_lagrange()
+
+def opcion_regresion_lineal():
+    regresion_lineal()
+
+  
+
 
 def mostrar_menu():
     print("\n--- MENÚ PRINCIPAL ---")
-    print("1. Evaluación polinomial por Horner")
-    print("2. Método de Muller")
-    print("3. Interpolación lineal")
-    print("4. Evaluación por LaGrange")
-    print("5. Polinomio de LaGrange")
+    print("1. Evaluación polinomial por el metodo de  Horner")
+    print("2. Determonacion de raices por el Método de Muller")
+    print("3. Determinación de polinomios por interpolación lineal")
+    print("4. Evaluación polinomial por el método de LaGrange")
+    print("5. Determinación de polinomios de LaGrange")
     print("6. Regresión lineal por mínimos cuadrados")
     print("0. Salir")
 
@@ -46,11 +65,11 @@ def main():
         elif opcion == "3":
             opcion_interpolacion_lineal()
         elif opcion == "4":
-            print(">> Aquí irá la evaluación por LaGrange")
+            opcion_lagrange()
         elif opcion == "5":
-            print(">> Aquí irá el polinomio de LaGrange")
+            opcion_polinomio_lagrange()
         elif opcion == "6":
-            print(">> Aquí irá la regresión lineal")
+            opcion_regresion_lineal()
         elif opcion == "0":
             print("Saliendo del programa...")
             break
