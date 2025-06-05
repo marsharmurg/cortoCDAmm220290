@@ -1,24 +1,31 @@
-# Análisis de Datos con Python - Métodos Numéricos
+# Corto CDA - Métodos Numéricos en Python
 
-Este proyecto contiene implementaciones en Python para métodos numéricos usados en análisis de datos y cálculo:  
-- Evaluación polinomial por Horner  
-- Método de Muller para encontrar raíces de polinomios  
-- (Próximamente: interpolación, regresión, etc.)
+Este proyecto implementa diversos métodos numéricos utilizando Python, permitiendo evaluar polinomios, encontrar raíces, realizar interpolaciones y ajustar datos por regresión lineal.
 
----
+## 📌 Métodos implementados
 
-## Contenido
+1. **Evaluación polinomial por el método de Horner**  
+2. **Determinación de raíces por el método de Muller**  
+3. **Determinación de polinomios por interpolación lineal**  
+4. **Evaluación polinomial por el método de LaGrange**  
+5. **Determinación de polinomios de LaGrange**  
+6. **Regresión lineal por mínimos cuadrados**  
 
-- `main.py` — Menú principal para seleccionar y usar los métodos implementados  
-- `horner.py` — Implementación del método de Horner para evaluación polinomial  
-- `muller.py` — Implementación del método de Muller para encontrar raíces de polinomios  
-- Archivos relacionados y caché de Python (`.pyc`)
+## ▶️ Cómo ejecutar
 
----
+Desde la terminal, ejecuta el archivo principal:
 
-## Requisitos
+python main.py
 
-- Python 3.11 o superior  
-- Librería `sympy` para manejo simbólico  
-  ```bash
-  pip install sympy
+La estructura de proyecto
+├── main.py                       # Menú principal e integración de métodos
+├── horner.py                    # Método de Horner
+├── muller.py                    # Método de Muller
+├── interpolacionlineal.py       # Interpolación lineal
+├── lagrange.py                  # Evaluación y polinomio de LaGrange
+├── regresion.py                 # Regresión lineal por mínimos cuadrados
+└── README.md                    # Este archivo
+
+ Autor
+Marcos Shafitk Murga
+
